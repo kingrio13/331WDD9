@@ -6,7 +6,7 @@ body {
   background-image: url(./asset/home-snow.svg);
   background-color: #0c0c46;
   background-repeat: no-repeat;
-  color: #ebebeb;
+  color: #B9B9CC;
   background-size: contain;
   background-position-y: 250px;
 }
@@ -14,6 +14,26 @@ body {
 a {
   color: #ebebeb;
   text-decoration: none;
+}
+
+a:hover {
+  color: #EFE925;
+}
+
+h1 {
+  color: #EFE925;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+h1:before {
+  content: ' ';
+  clip-path: inset(10px 20px 30px 40px);
+  /* or "none" */
+}
+
+h2, h3 {
+  color: #ebebeb;
 }
 
 .page-wrapper {
@@ -69,19 +89,6 @@ aside .zen-resources h3 {
   padding-top: 0px;
 }
 
-.zen-resources ul:before {
-  background-image: url(./asset/hamburger.svg);
-  position: absolute;
-  content: '';
-  display: block;
-  background-size: 50px;
-  background-repeat: no-repeat;
-  height: 100px;
-  background-position: top;
-  width: 100%;
-  z-index: -1;
-}
-
 .zen-resources ul li {
   list-style: none;
   display: inline;
@@ -101,22 +108,6 @@ aside .zen-resources h3 {
   border-bottom: solid 1px;
 }
 
-.zen-resources ul:target::before ~ li a {
-  opacity: 1;
-}
-
-.zen-resources ul li a:first-child {
-  margin-top: 30px;
-}
-
-.zen-resources ul:target li a {
-  opacity: 1;
-}
-
-.zen-resources ul li a {
-  opacity: 0;
-}
-
 .intro::before {
   display: block;
   content: "";
@@ -126,12 +117,31 @@ aside .zen-resources h3 {
   background-size: contain;
 }
 
-.intro::after, .participation::after {
+.participation::after {
+  display: block;
+  content: "#LightTheWorld";
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #B9B9CC;
+  color: #22313f;
+  text-shadow: 1px 1px 1px #EFE925;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: auto;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.intro::after {
   display: block;
   content: "";
   width: 100%;
-  height: 300px;
-  background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat center;
+  height: 50vh;
+  background: url("asset/santa-secret.svg") no-repeat top;
+  background-size: contain;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
 footer::before {
@@ -141,6 +151,19 @@ footer::before {
   height: 50vh;
   background: url("asset/snowman.svg") no-repeat top;
   background-size: contain;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+footer a {
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -159,6 +182,52 @@ footer::before {
   }
   .zen-resources ul::before {
     display: none;
+  }
+  .intro::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background: url("asset/banner.svg") no-repeat top;
+    background-size: contain;
+  }
+  .participation::after {
+    display: block;
+    content: "#LightTheWorld";
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #B9B9CC;
+    color: #22313f;
+    text-shadow: 1px 1px 1px #EFE925;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: auto;
+    background: #EFE925;
+    border-radius: 10px;
+    clip-path: circle(5% at 10% 50%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+  .participation:hover::after {
+    clip-path: circle(75%);
+    background: #B9B9CC;
+  }
+  .intro::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background: url("asset/santa-secret.svg") no-repeat top;
+    background-size: contain;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+  .intro:hover::after {
+    width: 100%;
+    height: 50vh;
+    background: url("asset/merry-christmas.svg") no-repeat top;
+    background-size: contain;
   }
 }
 
