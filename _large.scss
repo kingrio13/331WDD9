@@ -38,6 +38,13 @@
     background-size: auto;
 }
 
+footer::before{
+    background: url("asset/snowman.svg") no-repeat;
+    height:90vh;
+    background-size: auto;
+
+}
+
 
 .zen-resources{
 	display: grid;
