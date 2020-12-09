@@ -1,0 +1,23 @@
+
+body{
+    background-size: contain;
+    background-position-y: 100px
+}
+
+
+
+.intro::before{
+    height:70vh;
+}
+
+.zen-resources .ul li{
+	display: block;
+}
+
+.zen-resources ul li a{
+    opacity: 1;
+      }
+ .zen-resources ul::before{
+          display: none;
+      }
+    
